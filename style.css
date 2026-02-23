@@ -3,7 +3,6 @@
     --second-bg-color: #131313;
     --text-color: #ededed;
     --main-color: #00ffcc;
-    /* Cyan/Teal accent */
     --hover-color: #00e6b8;
 }
 
@@ -24,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Scrollbar styling */
+/* Scrollbar*/
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -94,7 +93,7 @@ body {
     display: none;
 }
 
-/* General Section rules */
+/* General Section*/
 .section {
     min-height: 100vh;
     padding: 8rem 9% 4rem;
@@ -111,7 +110,7 @@ body {
     text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
 }
 
-/* Hero Section */
+/* Hero*/
 .hero {
     display: flex;
     align-items: center;
@@ -252,7 +251,7 @@ body {
     }
 }
 
-/* About Section */
+/* About*/
 .about {
     background: var(--second-bg-color);
 }
@@ -298,7 +297,7 @@ body {
     color: var(--main-color);
 }
 
-/* Skills Section */
+/* Skills*/
 .skills-container {
     max-width: 800px;
     margin: 0 auto;
@@ -348,7 +347,7 @@ body {
     }
 }
 
-/* Projects Section */
+/* Projects*/
 .projects {
     background: var(--second-bg-color);
 }
@@ -442,7 +441,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Contact Section */
+/* Contact*/
 .contact {
     display: flex;
     flex-direction: column;
@@ -490,7 +489,7 @@ body {
     resize: none;
 }
 
-/* Footer */
+/* Footer*/
 .footer {
     display: flex;
     justify-content: space-between;
@@ -527,7 +526,7 @@ body {
 }
 
 
-/* Scroll Animations fade-in class */
+/* Scroll Animations*/
 .fade-in {
     opacity: 0;
     transform: translateY(40px);
@@ -539,7 +538,7 @@ body {
     transform: translateY(0);
 }
 
-/* Responsive */
+/* Responsive*/
 @media (max-width: 991px) {
     .navbar {
         padding: 2rem 4%;

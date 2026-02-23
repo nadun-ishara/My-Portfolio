@@ -1,11 +1,11 @@
-// Toggle Mobile Menu
+//Menu
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
 menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     
-    // Changing icon
+    //icon
     const icon = menuBtn.querySelector('i');
     if (navLinks.classList.contains('active')) {
         icon.classList.remove('fa-bars');
@@ -16,7 +16,7 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-// Close menu when clicking a link
+//Close menu when click
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -26,7 +26,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Sticky Navbar Active links
+//Navbar
 const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.nav-links a');
 
@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Typing Effect
+//Typing
 const typedWords = ["Frontend Developer", "Junior Full Stack Web Developer","UI/UX Designer", "Freelancer"];
 let wordIndex = 0;
 let charIndex = 0;
@@ -74,29 +74,29 @@ function typeEffect() {
     let typeSpeed = isDeleting ? 50 : 100;
 
     if (!isDeleting && charIndex === currentWord.length) {
-        typeSpeed = 2000; // Pause at end
+        typeSpeed = 2000;
         isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % typedWords.length;
-        typeSpeed = 500; // Pause before next word
+        typeSpeed = 500;
     }
 
     setTimeout(typeEffect, typeSpeed);
 }
 
-// Start typing effect on load
+//typing effect
 document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
 });
 
-// Scroll Animations (Intersection Observer)
+//Animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
             
-            // If it's the skills section, animate bars
+            //skills section
             if(entry.target.classList.contains('skills-container')) {
                 const skillFills = entry.target.querySelectorAll('.fill');
                 skillFills.forEach(fill => {
@@ -107,6 +107,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-// Observe regular fade-in elements
+//fade elements
 const hiddenElements = document.querySelectorAll('.fade-in');
 hiddenElements.forEach((el) => observer.observe(el));
